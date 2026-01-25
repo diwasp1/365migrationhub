@@ -447,7 +447,7 @@ export default function VisaTypesPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="flex-1 bg-gradient-to-r from-brand-blue to-brand-orange hover:from-brand-orange hover:to-brand-blue text-white"
+                  className="flex-1 bg-brand-orange hover:bg-brand-blue text-white"
                 >
                   <a href="/contact">Book Free Assessment</a>
                 </Button>

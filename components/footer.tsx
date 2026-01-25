@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import NextImage from "next/image"
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
 export function Footer() {
@@ -8,15 +11,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">365</span>
+              {/* Logo */}
+              <Link href="/" className="flex items-center space-x-3">
+              <NextImage src="/logo.jpg" alt="365 Migration Hub" width={60} height={60} className="rounded-lg" />
+              <div className="hidden sm:block">
+                <div className="font-semibold text-lg text-white dark:text-white">365 Migration Hub</div>
+                <div className="text-xs text-white">MARA Registered</div>
               </div>
-              <div>
-                <div className="font-semibold text-lg">365 Migration Hub</div>
-                <div className="text-sm text-gray-400">MARA Registered</div>
-              </div>
-            </div>
+            </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Your trusted Australian migration experts providing clear, honest, and reliable visa support for
               individuals, families, and professionals.
@@ -24,15 +26,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-400" />
-                <span>+61 401 234 567</span>
+                <span>+61 401 560 785</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-teal-400" />
-                <span>contact@365migrationhub.com.au</span>
+                <span>info@365migrationhub.com.au</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-teal-400" />
-                <span>Suite 305, Level 3, 451 Pitt Street, Sydney NSW 2000</span>
+                <span>Sydney, Australia</span>
               </div>
             </div>
           </div>
@@ -59,11 +61,6 @@ export function Footer() {
               <li>
                 <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">
                   FAQs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-                  Blog
                 </Link>
               </li>
               <li>
@@ -124,7 +121,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">© 2024 365 Migration Hub. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2026 365 Migration Hub. All rights reserved.</p>
             <p className="text-gray-400 text-sm text-center">
               <strong>Disclaimer:</strong> We do not guarantee visa outcomes. Results depend on individual circumstances
               and government policies.

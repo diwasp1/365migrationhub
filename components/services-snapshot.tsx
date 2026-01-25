@@ -10,37 +10,37 @@ const services = [
     icon: GraduationCap,
     title: "Student Visa Guidance",
     description: "Complete support for student visa applications, GTE preparation, and education pathway planning.",
-    color: "from-brand-blue to-brand-orange",
+    color: "bg-brand-blue",
   },
   {
     icon: Users,
     title: "Skilled Migration & Points Test",
     description: "Expert guidance on skilled visas, points assessment, and pathway optimization.",
-    color: "from-brand-orange to-yellow-500",
+    color: "bg-brand-blue",
   },
   {
     icon: Heart,
     title: "Partner/Family Visas",
     description: "Compassionate support for partner and family reunion visa applications.",
-    color: "from-rose-500 to-brand-orange",
+    color: "bg-brand-blue",
   },
   {
     icon: Scale,
     title: "Visa Refusals & AAT Appeals",
     description: "Professional representation for visa refusals and Administrative Appeals Tribunal cases.",
-    color: "from-emerald-500 to-brand-blue",
+    color: "bg-brand-blue",
   },
   {
     icon: FileText,
     title: "Health / Character Waiver Applications",
     description: "Specialized assistance with health and character waiver applications.",
-    color: "from-brand-blue to-purple-500",
+    color: "bg-brand-blue",
   },
   {
     icon: Building,
     title: "Employer Sponsorship & Regional Visas",
     description: "Business visa solutions and regional migration opportunities.",
-    color: "from-amber-500 to-brand-orange",
+    color: "bg-brand-blue",
   },
 ]
 
@@ -110,7 +110,7 @@ export function ServicesSnapshot() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-brand-blue to-brand-orange hover:from-brand-orange hover:to-brand-blue px-8 py-4"
+            className="bg-brand-orange hover:bg-brand-blue text-white px-8 py-4"
           >
             <Link href="/services">View All Services</Link>
           </Button>

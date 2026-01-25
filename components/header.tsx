@@ -14,7 +14,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Visa Types", href: "/visa-types" },
   { name: "FAQs", href: "/faq" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -34,24 +34,24 @@ export function Header() {
   return (
     <>
       {/* Top contact bar */}
-      <div className="bg-brand-blue text-white py-2 px-4 text-sm">
+      <div className="hidden md:block bg-brand-blue text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>+61 401 234 567</span>
+              <span>+61 401 560 785</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>contact@365migrationhub.com.au</span>
+              <span>info@365migrationhub.com.au</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Suite 305, Level 3, 451 Pitt Street, Sydney NSW 2000</span>
+              <span>Sydney, Australia</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs">Mon–Fri 9AM–5PM</span>
+            <span className="text-xs">Mon – Fri: 9AM – 5PM</span>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@ export function Header() {
               <ThemeToggle />
               <Button
                 asChild
-                className="bg-gradient-to-r from-brand-blue to-brand-orange hover:from-brand-orange hover:to-brand-blue text-white"
+                className="bg-brand-orange hover:bg-brand-blue text-white"
               >
                 <Link href="/contact">Book Consultation</Link>
               </Button>
@@ -127,7 +127,7 @@ export function Header() {
               ))}
               <Button
                 asChild
-                className="w-full bg-gradient-to-r from-brand-blue to-brand-orange hover:from-brand-orange hover:to-brand-blue text-white"
+                className="w-full bg-brand-orange hover:bg-brand-blue text-white"
               >
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   Book Consultation

@@ -187,42 +187,39 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Address</h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Suite 305, Level 3<br />
-                        451 Pitt Street
-                        <br />
-                        Sydney NSW 2000
+                        Sydney, Australia
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
-                      <p className="text-gray-600 dark:text-gray-300">+61 401 234 567</p>
+                      <p className="text-gray-600 dark:text-gray-300">+61 401 560 785</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
-                      <p className="text-gray-600 dark:text-gray-300">contact@365migrationhub.com.au</p>
+                      <p className="text-gray-600 dark:text-gray-300">info@365migrationhub.com.au</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -238,15 +235,15 @@ export default function ContactPage() {
               </div>
 
               {/* Map */}
-              <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
+              {/* <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Find Us</h3>
                 <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-xl flex items-center justify-center">
                   <p className="text-gray-500 dark:text-gray-400">Interactive Map Placeholder</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Quick Actions */}
-              <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
+              {/* <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Quick Actions</h3>
                 <div className="space-y-4">
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600">
@@ -259,7 +256,7 @@ export default function ContactPage() {
                     Schedule Phone Call
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
