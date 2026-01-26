@@ -33,6 +33,7 @@ export default function ContactPage() {
   const [value, setValue] = useState();
 
   async function onSubmit(data: {
+    access_key: string;
     fullName: string;
     email: string;
     mobile: string;
@@ -74,6 +75,7 @@ export default function ContactPage() {
         throw new Error("Submission failed");
       }
     } catch (error) {
+      console.log(error);
       toast.error("Error submitting the form. Please try again later.", {
         position: "bottom-right",
         autoClose: 4000,
@@ -161,6 +163,7 @@ export default function ContactPage() {
                     onSubmit={async (e) => {
                       e.preventDefault();
                       await onSubmit({
+                        access_key: "ba1bee60-5ef3-4a04-89e2-5d38473963a5",
                         fullName: formData.fullName,
                         email: formData.email,
                         mobile: formData.mobile,
