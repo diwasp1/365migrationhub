@@ -18,9 +18,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { PhoneInput } from "@/components/PhoneInput";
+import { toast } from "react-toastify";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
+    access_key: "ba1bee60-5ef3-4a04-89e2-5d38473963a5",
     fullName: "",
     email: "",
     mobile: "",
@@ -30,11 +32,62 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [value, setValue] = useState();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
+  async function onSubmit(data: {
+    fullName: string;
+    email: string;
+    mobile: string;
+    message: string;
+    preferredTime: string;
+  }) {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("We have received your message. Thank you!", {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+        });
+        setFormData({
+          access_key: "3b29dbb8-16a3-497c-ad04-217ef4a36870",
+          fullName: "",
+          email: "",
+          mobile: "",
+          message: "",
+          preferredTime: "",
+        });
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      toast.error("Error submitting the form. Please try again later.", {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }
+
+  console.log("formData", formData);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -44,7 +97,6 @@ export default function ContactPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float" />
@@ -105,7 +157,18 @@ export default function ContactPage() {
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      await onSubmit({
+                        fullName: formData.fullName,
+                        email: formData.email,
+                        mobile: formData.mobile,
+                        message: formData.message,
+                        preferredTime: formData.preferredTime,
+                      });
+                    }}
+                    className="space-y-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Full Name *
