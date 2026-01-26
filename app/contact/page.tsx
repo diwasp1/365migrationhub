@@ -1,16 +1,23 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { PhoneInput } from "@/components/PhoneInput";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -19,19 +26,19 @@ export default function ContactPage() {
     mobile: "",
     message: "",
     preferredTime: "",
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [value, setValue] = useState();
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+    e.preventDefault();
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   return (
     <main className="min-h-screen">
@@ -52,17 +59,19 @@ export default function ContactPage() {
             className="text-5xl md:text-6xl font-bold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Contact <span className="bg-gradient-to-r from-teal-300 to-blue-300 bg-clip-text text-transparent">Us</span>
+            transition={{ duration: 0.8 }}>
+            Contact{" "}
+            <span className="bg-gradient-to-r from-teal-300 to-blue-300 bg-clip-text text-transparent">
+              Us
+            </span>
           </motion.h1>
           <motion.p
             className="text-xl text-blue-100 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Ready to start your Australian migration journey? Get in touch with our expert team today.
+            transition={{ duration: 0.8, delay: 0.2 }}>
+            Ready to start your Australian migration journey? Get in touch with
+            our expert team today.
           </motion.p>
         </div>
       </section>
@@ -76,22 +85,24 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                  Send us a Message
+                </h2>
 
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-8"
-                  >
+                    className="text-center py-8">
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Message Sent Successfully!
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300">We'll get back to you within 24 hours.</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      We'll get back to you within 24 hours.
+                    </p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -103,47 +114,79 @@ export default function ContactPage() {
                         type="text"
                         required
                         value={formData.fullName}
-                        onChange={(e) => handleInputChange("fullName", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("fullName", e.target.value)
+                        }
                         className="w-full"
                         placeholder="Enter your full name"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Email *
+                      </label>
                       <Input
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         className="w-full"
                         placeholder="Enter your email address"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Mobile</label>
-                      <Input
-                        type="tel"
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Mobile *
+                      </label>
+                      <PhoneInput
                         value={formData.mobile}
-                        onChange={(e) => handleInputChange("mobile", e.target.value)}
-                        className="w-full"
-                        placeholder="Enter your mobile number"
+                        onChange={(val) => handleInputChange("mobile", val)}
                       />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Preferred Way To Contact
+                      </label>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("preferredTime", value)
+                        }>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select preferred Communication" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="call">Phone Call</SelectItem>
+                          <SelectItem value="whatsapp">Whatsapp</SelectItem>
+                          <SelectItem value="any">Any</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Preferred Contact Time
                       </label>
-                      <Select onValueChange={(value) => handleInputChange("preferredTime", value)}>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("preferredTime", value)
+                        }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select preferred time" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="morning">Morning (9AM - 12PM)</SelectItem>
-                          <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
-                          <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
+                          <SelectItem value="morning">
+                            Morning (9AM - 12PM)
+                          </SelectItem>
+                          <SelectItem value="afternoon">
+                            Afternoon (12PM - 5PM)
+                          </SelectItem>
+                          <SelectItem value="evening">
+                            Evening (5PM - 8PM)
+                          </SelectItem>
                           <SelectItem value="weekend">Weekend</SelectItem>
                         </SelectContent>
                       </Select>
@@ -156,7 +199,9 @@ export default function ContactPage() {
                       <Textarea
                         required
                         value={formData.message}
-                        onChange={(e) => handleInputChange("message", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
                         className="w-full h-32"
                         placeholder="Tell us about your migration goals and how we can help..."
                       />
@@ -164,8 +209,7 @@ export default function ContactPage() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 py-3"
-                    >
+                      className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 py-3">
                       Send Message <Send className="ml-2 w-4 h-4" />
                     </Button>
                   </form>
@@ -179,11 +223,12 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-8"
-            >
+              className="space-y-8">
               {/* Office Info */}
               <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Office Information</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Office Information
+                </h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -191,7 +236,9 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Address</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                        Address
+                      </h4>
                       <p className="text-gray-600 dark:text-gray-300">
                         Sydney, Australia
                       </p>
@@ -203,8 +250,12 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
-                      <p className="text-gray-600 dark:text-gray-300">+61 401 560 785</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                        Phone
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        +61 401 560 785
+                      </p>
                     </div>
                   </div>
 
@@ -213,8 +264,12 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
-                      <p className="text-gray-600 dark:text-gray-300">info@365migrationhub.com.au</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                        Email
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        info@365migrationhub.com.au
+                      </p>
                     </div>
                   </div>
 
@@ -223,7 +278,9 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Hours</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                        Hours
+                      </h4>
                       <p className="text-gray-600 dark:text-gray-300">
                         Mon–Fri: 9AM–5PM
                         <br />
@@ -264,5 +321,5 @@ export default function ContactPage() {
 
       <Footer />
     </main>
-  )
+  );
 }
