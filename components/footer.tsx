@@ -2,7 +2,15 @@
 
 import Link from "next/link"
 import NextImage from "next/image"
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import {
+  Phone,
+  Mail,
+  MapPin,
+  FacebookIcon,
+  Instagram,
+  Music2,
+  Youtube
+} from "lucide-react";
 
 export function Footer() {
   return (
@@ -19,6 +27,9 @@ export function Footer() {
                 <div className="text-xs text-white">MARA Registered</div>
               </div>
             </Link>
+            <p className="text-gray-300 my-3 max-w-md">
+              MARA Registration Number : 2619180
+            </p>
             <p className="text-gray-300 mb-6 max-w-md">
               Your trusted Australian migration experts providing clear, honest, and reliable visa support for
               individuals, families, and professionals.
@@ -76,41 +87,37 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-6">Important Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/code-of-conduct" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="https://www.mara.gov.au/tools-for-agents-subsite/Files/code-of-conduct-march-2022.pdf" target="_" className="text-gray-300 hover:text-white transition-colors">
                   Code of Conduct
                 </Link>
               </li>
               <li>
-                <Link href="/consumer-guide" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="https://www.mara.gov.au/get-help-visa-subsite/FIles/consumer_guide_english.pdf" target="_" className="text-gray-300 hover:text-white transition-colors">
                   Consumer Guide
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
+                <Link href="https://www.homeaffairs.gov.au/help-and-support/departmental-forms/online-forms/border-watch?offenceType=immigration" target="_" className="text-gray-300 hover:text-white transition-colors">
+                Report Unlawful Immigration Assistance 
                 </Link>
               </li>
-              <li>
-                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
+            
             </ul>
 
             {/* Social Media */}
             <div className="mt-8">
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Facebook className="w-6 h-6" />
+                <a href="https://www.facebook.com/365migrationhub" target="_" className="text-gray-400 hover:text-white transition-colors">
+                  <FacebookIcon className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Twitter className="w-6 h-6" />
+                <a href="https://www.youtube.com/@365migrationhub" target="_" className="text-gray-400 hover:text-white transition-colors">
+                  <Youtube className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Linkedin className="w-6 h-6" />
+                <a href="https://www.tiktok.com/@365.migration.hub" target="_" className="text-gray-400 hover:text-white transition-colors">
+                  <Music2 className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/365migrationhub/" target="_" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
@@ -118,14 +125,23 @@ export function Footer() {
           </div>
         </div>
 
+
+    {/* Bottom bar Disclaimer */}
+    <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col justify-between gap-4">
+          <p className="text-gray-400 text-sm ">
+              <strong>Acknowledgement of Country :</strong> 365 Migration Hub Pty Ltd acknowledges the Traditional Custodians of Country throughout Australia and pays respect to Aboriginal and Torres Strait Islander peoples, their cultures, and Elders past, present, and emerging..
+            </p>
+            <p className="text-gray-400 text-sm ">
+              <strong>Disclaimer:</strong> The information on this website is general in nature only and does not constitute immigration advice. Migration laws and policies may change at any time. You should contact 365 Migration Hub Pty Ltd before relying on this information. Immigration assistance and legal advice are provided only after a written service agreement is in place. We are not responsible for any loss arising from reliance on this content.
+            </p>
+           
+          </div>
+        </div>
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="justify-between items-center gap-4 text-center">
             <p className="text-gray-400 text-sm">© 2026 365 Migration Hub. All rights reserved.</p>
-            <p className="text-gray-400 text-sm text-center">
-              <strong>Disclaimer:</strong> We do not guarantee visa outcomes. Results depend on individual circumstances
-              and government policies.
-            </p>
           </div>
         </div>
       </div>

@@ -51,7 +51,21 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs">Mon – Fri: 9AM – 5PM</span>
+            <span className="text-xs">Mon – Fri: 9AM – 8PM | Weekend & After Hours By Appointment</span>
+          </div>
+        </div>
+      </div>
+      {/* top visa  */}
+      <div className="hidden md:block bg-brand-blue text-white py-2 px-4 text-sm border-t">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+            <span className="">Not sure about your visa options?</span>
+            </div>
+           
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="">Book a free 15-minute online consultation and let’s talk through your migration plans.</span>
           </div>
         </div>
       </div>

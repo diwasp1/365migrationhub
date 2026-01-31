@@ -31,7 +31,7 @@ const visaCategories = [
         description: "For international students studying full-time in Australia",
         requirements: [
           "Enrollment in a registered course",
-          "Genuine Temporary Entrant (GTE) requirement",
+          "Genuine Student (GS)",
           "English language proficiency",
           "Financial capacity",
           "Health and character requirements",
@@ -69,7 +69,7 @@ const visaCategories = [
         description: "Allows recent graduates to work in Australia temporarily",
         requirements: [
           "Recently completed Australian qualification",
-          "Under 50 years of age",
+          "Under 35/50 years of age",
           "English language proficiency",
           "Health and character requirements",
           "Adequate health insurance",
@@ -142,7 +142,7 @@ const visaCategories = [
     visas: [
       {
         subclass: "482",
-        name: "Temporary Skill Shortage Visa",
+        name: "Temporary Skill In Demand (SID)",
         description: "Temporary work visa for skilled workers",
         requirements: [
           "Employer sponsorship",
@@ -169,6 +169,21 @@ const visaCategories = [
         ],
         processingTime: "8-12 months",
         cost: "From AUD $4,640",
+      },
+      {
+        subclass: "407",
+        name: "Training Visa",
+        description: "For individuals undertaking workplace-based training to enhance skills in their nominated occupation in Australia",
+        requirements: [
+          "Sponsored by an approved Australian organisation",
+          "Genuine intention to undertake the training",
+          "Training must be directly related to the nominated occupation",
+          "Meet health and character requirements",
+          "Provide evidence of an approved training plan and training provider",
+          "Must have sufficient funds for stay and living expenses",
+        ],
+        processingTime: "3–6 months",
+        cost: "From AUD $405",
       },
     ],
   },
@@ -207,6 +222,52 @@ const visaCategories = [
         processingTime: "12-29 months",
         cost: "From AUD $8,850",
       },
+      {
+        subclass: "300",
+        name: "Prospective Marriage Visa (Offshore)",
+        description: "For fiancés/fiancées of Australian citizens, Australian permanent residents, or eligible New Zealand citizens outside Australia",
+        requirements: [
+          "Genuine intention to marry the sponsor within 9 months",
+          "Sponsor is an Australian citizen, permanent resident, or eligible New Zealand citizen",
+          "Meet health and character requirements",
+          "Provide evidence of a genuine and ongoing relationship",
+          "Provide financial and personal commitment evidence",
+          "Must be outside Australia at the time of application and visa grant",
+        ],
+        processingTime: "12–20 months",
+        cost: "From AUD $8,850",
+      },
+      {
+        subclass: "103",
+        name: "Parent Visa (Offshore)",
+        description: "For parents of Australian citizens, permanent residents, or eligible New Zealand citizens outside Australia",
+        requirements: [
+          "Applicant must be outside Australia at the time of application",
+          "Child is an Australian citizen, permanent resident, or eligible New Zealand citizen",
+          "Meet health and character requirements",
+          "Must meet the balance-of-family requirement (majority of children living in Australia)",
+          "Provide financial support and parent–child relationship evidence",
+          "Visa processing times can be very long",
+        ],
+        processingTime: "Very long (often 20+ years)",
+        cost: "From AUD $6,625",
+      },
+      {
+        subclass: "804",
+        name: "Aged Parent Visa (Onshore)",
+        description: "For aged parents of Australian citizens, permanent residents, or eligible New Zealand citizens who are in Australia",
+        requirements: [
+          "Applicant must be inside Australia at the time of application",
+          "Child is an Australian citizen, permanent resident, or eligible New Zealand citizen",
+          "Meet health and character requirements",
+          "Must meet the balance-of-family requirement",
+          "Applicant must meet the age criteria as defined by the Department of Home Affairs",
+          "Provide financial support and parent–child relationship evidence",
+          "Visa processing times can be very long",
+        ],
+        processingTime: "Very long (often 20+ years)",
+        cost: "From AUD $6,625",
+      },
     ],
   },
   {
@@ -243,7 +304,7 @@ export default function VisaTypesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-orange overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-orange overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float" />
           <div
@@ -271,10 +332,10 @@ export default function VisaTypesPage() {
             Explore different visa categories and find the right pathway for your Australian journey
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Visa Categories */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-10 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,7 +415,7 @@ export default function VisaTypesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {category.visas.map((visa, index) => (
                       <motion.div
                         key={visa.subclass}
@@ -366,7 +427,7 @@ export default function VisaTypesPage() {
                         <div className="grid lg:grid-cols-3 gap-8">
                           <div className="lg:col-span-2">
                             <div className="flex items-center gap-4 mb-4">
-                              <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-bold">
+                              <span className="bg-brand-orange text-white px-3 py-1 rounded-lg text-sm font-bold">
                                 Subclass {visa.subclass}
                               </span>
                               <h3 className="text-2xl font-bold text-brand-blue dark:text-white">{visa.name}</h3>
@@ -390,7 +451,7 @@ export default function VisaTypesPage() {
                               </ul>
                             </div>
                           </div>
-
+{/* 
                           <div className="space-y-6">
                             <div className="glass p-6 rounded-xl backdrop-blur-sm bg-brand-blue/5 border border-brand-blue/20">
                               <h4 className="font-semibold text-brand-blue dark:text-white mb-2">Processing Time</h4>
@@ -408,7 +469,7 @@ export default function VisaTypesPage() {
                             >
                               <a href="/contact">Get Expert Help</a>
                             </Button>
-                          </div>
+                          </div> */}
                         </div>
                       </motion.div>
                     ))}

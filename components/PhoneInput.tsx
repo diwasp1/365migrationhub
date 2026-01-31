@@ -102,7 +102,7 @@ export const PhoneInput = ({ value, onChange }: PhoneInputProps) => {
 
       <Input
         type="tel"
-        placeholder="401 560 785"
+        placeholder=""
         className="flex-1"
         value={currentNumberPart}
         onChange={handleNumberChange}

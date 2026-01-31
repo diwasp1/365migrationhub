@@ -15,7 +15,7 @@ const services = [
     color: "from-blue-500 to-cyan-500",
     features: [
       "Student Visa (Subclass 500) applications",
-      "Genuine Temporary Entrant (GTE) preparation",
+      "Genuine Statement (GS) preparation",
       "Education pathway planning",
       "Course selection guidance",
       "Financial requirement assessment",
@@ -31,9 +31,9 @@ const services = [
       "Skills assessment coordination",
       "Points test optimization",
       "Expression of Interest (EOI) preparation",
-      "State nomination applications",
-      "Regional visa pathways",
-      "Post-graduation visa transitions",
+      "State nomination applications (subclass 491 and 190 visa)",
+      "Regional visa (subclass 494 visa) pathways",
+      "Post-graduation visa (subclass 485 visa) transitions",
     ],
   },
   {
@@ -56,11 +56,11 @@ const services = [
     description: "Professional representation for complex cases",
     color: "from-emerald-500 to-teal-500",
     features: [
-      "Administrative Appeals Tribunal (AAT) representation",
+      "Administrative Review Tribunal (ART) Representation ",
       "Refusal analysis and strategy development",
       "Fresh application preparation",
       "Ministerial intervention requests",
-      "Judicial review applications",
+      "Support for Judicial review applications",
       "Case law research and application",
     ],
   },
@@ -70,11 +70,11 @@ const services = [
     description: "Solutions for businesses and sponsored employees",
     color: "from-indigo-500 to-purple-500",
     features: [
-      "Temporary Skill Shortage (TSS) visas",
-      "Employer Nomination Scheme (ENS)",
-      "Regional Sponsored Migration Scheme (RSMS)",
+      "Skill in Demand (SID) (482 visa)",
+      "Employer Nomination Scheme (ENS) (186 DE and TRT)",
+      "Skilled Employer Sponsored Regional (Provisional) visa (494)",
       "Business Innovation and Investment visas",
-      "Labour agreements",
+      "Training visa (Subclass 407)",
       "Sponsorship obligations guidance",
     ],
   },
@@ -84,9 +84,9 @@ const services = [
     description: "Specialized assistance with waiver applications",
     color: "from-amber-500 to-orange-500",
     features: [
-      "Health waiver applications",
-      "Character waiver applications",
-      "Public Interest Criterion waivers",
+      "Health waiver applications (PIC 4005 and 4007)",
+      "Character waiver applications (PIC 4001)",
+      "Public Interest Criterion waivers (PIC 4020 and others)",
       "Compelling circumstances applications",
       "Medical assessments coordination",
       "Supporting documentation preparation",
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float" />
           <div
@@ -128,10 +128,10 @@ export default function ServicesPage() {
             Comprehensive migration services tailored to your unique situation and goals
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-10 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {services.map((service, index) => (

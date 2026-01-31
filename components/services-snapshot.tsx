@@ -9,7 +9,7 @@ const services = [
   {
     icon: GraduationCap,
     title: "Student Visa Guidance",
-    description: "Complete support for student visa applications, GTE preparation, and education pathway planning.",
+    description: "Complete support for student visa applications, GS preparation, and education pathway planning.",
     color: "bg-brand-blue",
   },
   {
@@ -26,8 +26,8 @@ const services = [
   },
   {
     icon: Scale,
-    title: "Visa Refusals & AAT Appeals",
-    description: "Professional representation for visa refusals and Administrative Appeals Tribunal cases.",
+    title: "Visa Refusals & ART Appeals",
+    description: "Professional representation for visa refusals and Administrative Review Tribunal (ART) cases.",
     color: "bg-brand-blue",
   },
   {

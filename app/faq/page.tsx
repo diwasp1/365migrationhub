@@ -22,9 +22,9 @@ const faqs = [
   {
     id: 2,
     category: "Student Visas",
-    question: "What is GTE and how important is it?",
+    question: "What is GS and how important is it?",
     answer:
-      "Genuine Temporary Entrant (GTE) is a requirement for student visas where you must demonstrate that you genuinely intend to stay in Australia temporarily for study purposes. It's crucial as it's one of the main reasons for student visa refusals. We help you prepare a compelling GTE statement that addresses your circumstances, study plans, and future intentions.",
+      "Genuine Student (GS) is a requirement for student visas where you must demonstrate that you genuinely intend to stay in Australia temporarily for study purposes. It's crucial as it's one of the main reasons for student visa refusals. We help you prepare a compelling GS statement that addresses your circumstances, study plans, and future intentions.",
     featured: true,
   },
   {
@@ -40,7 +40,7 @@ const faqs = [
     category: "Student Visas",
     question: "How much money do I need to show for a student visa?",
     answer:
-      "You need to demonstrate you have sufficient funds to cover tuition fees, living costs (currently $24,505 per year), travel costs, and costs for dependents if applicable. You can show this through bank statements, education loans, or financial support from parents/sponsors. The exact amount depends on your course duration and family situation.",
+    "You need to demonstrate you have sufficient funds to cover your first-year tuition fees and living costs (currently $29,710 for a single applicant). You also need to show additional funds for travel costs, health insurance and dependents, if applicable. You can show this through bank statements, education loans, or financial support from parents/sponsors. The exact amount depends on your course duration and family situation. ",
     featured: false,
   },
   {
@@ -72,7 +72,7 @@ const faqs = [
     category: "Appeals",
     question: "What can I do if my visa is refused?",
     answer:
-      "If your visa is refused, you may have options including: applying for a new visa with additional evidence, requesting Ministerial Intervention, or appealing to the Administrative Appeals Tribunal (AAT) if eligible. The best option depends on the refusal reasons and your specific circumstances. Time limits apply, so it's important to seek advice quickly.",
+      "If your visa is refused, you may have options including: applying for a new visa with additional evidence, requesting Ministerial Intervention, or appealing to the Administrative Review Tribunal (ART) if eligible. The best option depends on the refusal reasons and your specific circumstances. Time limits apply, so it's important to seek advice quickly.",
     featured: false,
   },
   {
@@ -104,7 +104,7 @@ const faqs = [
     category: "General",
     question: "What are the English language requirements?",
     answer:
-      "English requirements vary by visa type. Common tests include IELTS, PTE Academic, TOEFL iBT, and Cambridge English. Student visas typically require IELTS 5.5-6.5, skilled migration visas require 6.0-8.0 depending on points claimed, and partner visas may require functional English (IELTS 4.5) in some cases.",
+      "English requirements vary by visa type. Common tests include IELTS, PTE Academic, TOEFL iBT, and Cambridge English. Student visas typically require IELTS 6.0-7.0, skilled migration visas require 6.0-8.0 depending on points claimed, and partner visas may require functional English (IELTS 4.5) in some cases.",
     featured: false,
   },
 ]
@@ -178,7 +178,7 @@ export default function FAQPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-orange overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-orange overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float" />
           <div
@@ -206,7 +206,7 @@ export default function FAQPage() {
             Find answers to common questions about Australian visas and migration processes
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Search and Filter Section */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900">

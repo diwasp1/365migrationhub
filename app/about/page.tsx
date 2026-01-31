@@ -74,7 +74,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float" />
           <div
@@ -103,10 +103,10 @@ export default function AboutPage() {
             education consultancy, supporting over 500 successful visa outcomes.
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Who We Are */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-10 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -118,18 +118,12 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                365 Migration Hub is led by a registered migration agent with
-                extensive experience in law and education consultancy. Our team
-                combines legal expertise with a deep understanding of the
-                Australian education system to provide comprehensive migration
-                solutions.
+              365 Migration Hub is led by a registered migration agent with a strong background in migration law and Australian education consultancy. A UTS graduate and recipient of a Dean’s Merit List recognition, our registered migration agent brings over 10 years of experience in the Australian education sector, combined with sound legal expertise, to deliver practical and reliable migration solutions.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                We pride ourselves on our client-first approach, ensuring that
-                every individual receives personalized attention and tailored
-                advice based on their unique circumstances and goals.
+              We take pride in our client-first approach, providing personalised guidance and tailored advice based on each client’s unique circumstances and goals. To better support our diverse client base, our team is able to assist clients in multiple languages, ensuring clear communication and confidence throughout the migration journey.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              {/* <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -146,7 +140,7 @@ export default function AboutPage() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+              </div> */}
             </motion.div>
 
             <motion.div
@@ -157,7 +151,7 @@ export default function AboutPage() {
               className="relative">
               <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
                 <img
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/about.png"
                   alt="365 Migration Hub Team"
                   className="w-full h-64 object-cover rounded-xl mb-6"
                 />

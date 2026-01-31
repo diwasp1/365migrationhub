@@ -52,8 +52,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Providing clear, honest, and reliable visa support for individuals, families, and professionals with over
-              10 years of expertise.
+              Providing clear, honest, and reliable visa support for individuals, families, and professionals.
             </motion.p>
 
             <motion.div
@@ -68,21 +67,21 @@ export function HeroSection() {
                 className="bg-gradient-to-r from-brand-orange to-yellow-500 hover:from-yellow-500 hover:to-brand-orange text-white px-8 py-4 text-lg"
               >
                 <Link href="/contact">
-                  Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
+                Speak With a Registered Agent <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg backdrop-blur-sm bg-transparent"
               >
-                <Link href="/about">Speak With a Registered Agent</Link>
-              </Button>
+                <Link href="/contact">Speak With a Registered Agent</Link>
+              </Button> */}
             </motion.div>
 
             {/* Trust indicators */}
-            <motion.div
+            {/* <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center lg:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,7 +103,7 @@ export function HeroSection() {
                 <div className="text-2xl font-bold">24/7</div>
                 <div className="text-sm text-blue-200">Support</div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Floating glass cards */}
@@ -129,7 +128,7 @@ export function HeroSection() {
                   </div>
                   <div className="flex items-center gap-3 text-white">
                     <Award className="w-5 h-5 text-brand-orange" />
-                    <span>Over 10 Years of Expertise</span>
+                    <span>Over 10 Years of Expertise in Australian Education Sector</span>
                   </div>
                   <div className="flex items-center gap-3 text-white">
                     <Globe className="w-5 h-5 text-brand-orange" />

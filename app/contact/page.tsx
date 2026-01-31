@@ -6,7 +6,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -99,7 +99,7 @@ export default function ContactPage() {
     <main className="min-h-screen">
       <Header />
 
-      <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-blue-900 to-teal-700 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float" />
           <div
@@ -128,10 +128,10 @@ export default function ContactPage() {
             our expert team today.
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-10 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -311,21 +311,44 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
+                  {/* <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-                        Phone
+                        WhatsApp
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
                         +61 401 560 785
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="flex items-start gap-4">
+<a
+  href="https://wa.me/61401560785?text=Hi%20I%20am%20enquiring%20from%20your%20website"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-4 group"
+>
+  <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition">
+    <MessageCircle className="w-6 h-6 text-white" />
+  </div>
+
+  <div>
+    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+      WhatsApp
+    </h4>
+    <p className="text-gray-600 dark:text-gray-300">
+      +61 401 560 785
+    </p>
+  </div>
+</a>
+
+
+
+
+                  {/* <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
@@ -337,7 +360,26 @@ export default function ContactPage() {
                         info@365migrationhub.com.au
                       </p>
                     </div>
-                  </div>
+                  </div> */}
+
+<a
+  href="mailto:info@365migrationhub.com.au"
+  className="flex items-start gap-4 group"
+>
+  <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition">
+    <Mail className="w-6 h-6 text-white" />
+  </div>
+
+  <div>
+    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+      Email
+    </h4>
+    <p className="text-gray-600 dark:text-gray-300">
+      info@365migrationhub.com.au
+    </p>
+  </div>
+</a>
+
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center flex-shrink-0">
@@ -348,9 +390,9 @@ export default function ContactPage() {
                         Hours
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Mon–Fri: 9AM–5PM
+                        Mon–Fri: 9AM–8PM
                         <br />
-                        Weekend: By appointment
+                        Weekend and After Hours: By appointment
                       </p>
                     </div>
                   </div>

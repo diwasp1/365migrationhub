@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesSnapshot } from "@/components/services-snapshot"
+import { PartnersCarousel } from "@/components/partners-carousel"
 import { Testimonials } from "@/components/testimonials"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
@@ -11,7 +12,8 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <ServicesSnapshot />
-      <Testimonials />
+      <PartnersCarousel />
+      {/* <Testimonials /> */}
 
 
       {/* CTA Section */}
