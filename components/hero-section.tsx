@@ -8,9 +8,13 @@ import { ArrowRight, CheckCircle, Users, Award, Globe, Heart } from "lucide-reac
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/90 to-brand-orange animate-gradient" />
+     
+      {/* Background image */}
+      <div className="absolute inset-0 bg-[url('/images/banner.jpg')] bg-cover bg-center" />
 
+      {/* Black overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+    
       {/* Floating background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-brand-orange/20 rounded-full blur-3xl animate-float" />
@@ -144,7 +148,7 @@ export function HeroSection() {
               {/* Secondary cards */}
               <div className="grid grid-cols-2 gap-4">
                 <motion.div
-                  className="glass p-6 rounded-xl backdrop-blur-xl  bg-[url('/images/mia.jpg')] bg-cover bg-center bg-black/40 border border-white/10"
+                  className="glass p-6 rounded-xl backdrop-blur-xl bg-black/5 border border-white/10"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -154,7 +158,7 @@ export function HeroSection() {
                 </motion.div>
 
                 <motion.div
-                  className="glass p-6 rounded-xl backdrop-blur-xl bg-[url('/images/mia.jpg')] bg-cover bg-center  bg-black/40 border border-white/10"
+                  className="glass p-6 rounded-xl backdrop-blur-xl bg-black/5 border border-white/10"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
