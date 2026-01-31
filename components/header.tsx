@@ -56,10 +56,10 @@ export function Header() {
         </div>
       </div>
       {/* top visa  */}
-      <div className="hidden md:block bg-brand-blue text-white py-4 text-m border-t text-center">
+      <div className=" bg-gradient-to-r from-brand-orange to-yellow-500 text-white py-4 text-m border-t text-center px-2">
   <span className="animate-blink">
    <a href="/contact">
-   Not sure about your visa options? : Book a free 15-minute online consultation and let’s talk through your migration plans.
+   Not sure about your visa options? : Book a free 15-minute online consultation.
     </a> 
   </span>
 </div>
@@ -97,15 +97,28 @@ export function Header() {
             </nav>
 
             {/* CTA and Theme Toggle */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <ThemeToggle />
+            <div className="flex items-center space-x-4">
+              {/* <ThemeToggle /> */}
               <Button
                 asChild
-                className="bg-brand-orange hover:bg-brand-blue text-white"
+                className=" bg-brand-blue hover:bg-brand-orange text-white"
               >
-                <Link href="/contact">Book Consultation</Link>
+                {/* <Link href="/contact">WhatsApp Now Instant Reply</Link> */}
+                <a
+  href="https://wa.me/61401560785?text=Hi%20I%20am%20enquiring%20from%20your%20website"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-4 group"
+>
+WhatsApp Now Instant Reply
+
+
+</a>
               </Button>
             </div>
+
+
+
 
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center space-x-2">

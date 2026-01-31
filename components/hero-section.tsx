@@ -60,7 +60,7 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+              className="flex flex-col gap-4 justify-center lg:justify-start mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -71,17 +71,17 @@ export function HeroSection() {
                 className="bg-gradient-to-r from-brand-orange to-yellow-500 hover:from-yellow-500 hover:to-brand-orange text-white px-8 py-4 text-lg"
               >
                 <Link href="/contact">
-                Speak With a Registered Agent <ArrowRight className="ml-2 w-5 h-5" />
+                Speak With a Migration Agent  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              {/* <Button
+              <Button
                 asChild
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg backdrop-blur-sm bg-transparent"
               >
-                <Link href="/contact">Speak With a Registered Agent</Link>
-              </Button> */}
+                <Link href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=93a98695-df07-f011-bae3-000d3ad10180" target="_">MARN: 2619180</Link>
+              </Button>
             </motion.div>
 
             {/* Trust indicators */}
@@ -120,7 +120,7 @@ export function HeroSection() {
             <div className="grid grid-cols-1 gap-6">
               {/* Main card */}
               <motion.div
-                className="glass p-8 rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20"
+                className="glass p-8  rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20"
                 whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

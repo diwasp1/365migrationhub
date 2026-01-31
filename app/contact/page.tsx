@@ -10,6 +10,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageCircle } from "lu
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import {
   Select,
   SelectContent,
@@ -337,7 +338,7 @@ export default function ContactPage() {
 
   <div>
     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-      WhatsApp
+      WhatsApp / Mobile
     </h4>
     <p className="text-gray-600 dark:text-gray-300">
       +61 401 560 785
@@ -399,8 +400,41 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map */}
-              {/* <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
+            
+{/* WhatsApp QR */}
+<div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20 text-center">
+  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+    Chat With Us on WhatsApp
+  </h3>
+
+  <p className="text-gray-600 dark:text-gray-300 mb-6">
+    Scan the QR code to start a WhatsApp chat instantly
+  </p>
+
+  <div className="flex justify-center">
+    <div className="bg-white p-4 rounded-xl shadow-md">
+      <img
+        src="/images/whatsapp.jpg"
+        alt="WhatsApp QR Code"
+        className="w-40 h-40 object-contain"
+      />
+    </div>
+  </div>
+
+  <a
+    href="https://wa.me/61401560785?text=Hi%20I%20am%20enquiring%20from%20your%20website"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block mt-6 text-brand-blue font-medium hover:underline"
+  >
+    Or click here to chat on WhatsApp
+  </a>
+</div>
+
+      
+
+                 {/* Map */}
+                 {/* <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Find Us</h3>
                 <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-xl flex items-center justify-center">
                   <p className="text-gray-500 dark:text-gray-400">Interactive Map Placeholder</p>
@@ -423,6 +457,8 @@ export default function ContactPage() {
                 </div>
               </div> */}
             </motion.div>
+
+            
           </div>
         </div>
       </section>
