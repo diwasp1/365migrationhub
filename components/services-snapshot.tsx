@@ -72,7 +72,7 @@ export function ServicesSnapshot() {
               whileHover={{ y: -10, scale: 1.02 }}
               className="group"
             >
-              <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20 h-full transition-all duration-300 hover:shadow-2xl">
+              <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 shadow-md border border-white/20 h-full transition-all duration-300 hover:shadow-2xl">
                 <div
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >

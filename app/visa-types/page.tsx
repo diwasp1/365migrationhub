@@ -362,7 +362,7 @@ export default function VisaTypesPage() {
                 onClick={() => setSelectedCategory(selectedCategory === category.id ? null : category.id)}
               >
                 <div
-                  className={`glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20 h-full transition-all duration-300 hover:shadow-2xl ${
+                  className={`glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border  border-white/20 shadow-md h-full transition-all duration-300 hover:shadow-2xl ${
                     selectedCategory === category.id ? "ring-2 ring-brand-orange" : ""
                   }`}
                 >
@@ -415,16 +415,16 @@ export default function VisaTypesPage() {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="border rounded-xl">
                     {category.visas.map((visa, index) => (
                       <motion.div
                         key={visa.subclass}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.1 }}
-                        className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20"
+                        className="glass p-6 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20"
                       >
-                        <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="grid lg:grid-cols-3  border p-6 rounded-xl">
                           <div className="lg:col-span-2">
                             <div className="flex items-center gap-4 mb-4">
                               <span className="bg-brand-orange text-white px-3 py-1 rounded-lg text-sm font-bold">
@@ -518,7 +518,7 @@ export default function VisaTypesPage() {
                   size="lg"
                   className="flex-1 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white bg-transparent"
                 >
-                  <a href="tel:+61401234567">Call Now</a>
+                  <a href="tel:+61401560785">Call Now</a>
                 </Button>
               </div>
             </div>

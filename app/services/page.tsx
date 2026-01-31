@@ -143,7 +143,7 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="glass p-8 rounded-2xl backdrop-blur-sm bg-white/60 dark:bg-white/5 border border-white/20 h-full hover:shadow-2xl transition-all duration-300">
+                <div className="glass p-8 rounded-2xl backdrop-blur-sm shadow-md bg-white/60 dark:bg-white/5 border border-white/20 h-full hover:shadow-2xl transition-all duration-300">
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
