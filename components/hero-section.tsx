@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle, Users, Award, Globe, Heart } from "lucide-reac
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] flex overflow-hidden">
      
       {/* Background image */}
       <div className="absolute inset-0 bg-[url('/images/banner.jpg')] bg-cover bg-center" />
@@ -16,7 +16,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
     
       {/* Floating background elements */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-brand-orange/20 rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float"
@@ -26,7 +26,7 @@ export function HeroSection() {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-orange/30 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "4s" }}
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
