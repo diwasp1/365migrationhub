@@ -29,7 +29,11 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange>
-          {children}
+               {/* Global max-width wrapper */}
+          <div className="max-w-8xl mx-auto">
+            {children}
+          </div>
+          
         </ThemeProvider>
         <ToastContainer />
       </body>
