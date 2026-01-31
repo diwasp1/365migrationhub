@@ -46,7 +46,7 @@ const partners: PartnerItem[] = [
     subLabel: "Registration Number",
     regNumber: "2619180",
     link: "www.mara.gov.au",
-    // image: "/logos/mara.png",
+    image: "/images/mara.png",
   },
   {
     id: "365-migrationhub",
@@ -68,7 +68,7 @@ const partners: PartnerItem[] = [
     subLabel: "Registration Number",
     regNumber: "2619180",
     link: "www.mara.gov.au",
-    // image: "/logos/mara.png",
+    image: "/images/mara.png",
   },
   {
     id: "365-migrationhub",
@@ -90,7 +90,7 @@ const partners: PartnerItem[] = [
     subLabel: "Registration Number",
     regNumber: "2619180",
     link: "www.mara.gov.au",
-    // image: "/logos/mara.png",
+    image: "/images/mara.png",
   },
 
 ]

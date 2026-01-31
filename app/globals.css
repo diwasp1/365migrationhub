@@ -193,3 +193,19 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e87512;
 }
+
+
+/* top header blink  */
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 3s infinite;
+}

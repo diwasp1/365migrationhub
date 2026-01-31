@@ -39,36 +39,30 @@ export function Header() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>+61 401 560 785</span>
+              <strong>+61 401 560 785</strong>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>info@365migrationhub.com.au</span>
+              <strong >info@365migrationhub.com.au</strong>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Sydney, Australia</span>
+              <strong>Sydney, Australia</strong>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs">Mon – Fri: 9AM – 8PM | Weekend & After Hours By Appointment</span>
+            <strong className="text-xs">Mon – Fri: 9AM – 8PM | Weekend & After Hours By Appointment</strong>
           </div>
         </div>
       </div>
       {/* top visa  */}
-      <div className="hidden md:block bg-brand-blue text-white py-2 px-4 text-sm border-t">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-            <span className="">Not sure about your visa options?</span>
-            </div>
-           
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="">Book a free 15-minute online consultation and let’s talk through your migration plans.</span>
-          </div>
-        </div>
-      </div>
+      <div className="hidden md:block bg-brand-blue text-white py-4 text-m border-t text-center">
+  <span className="animate-blink">
+   <a href="/contact">
+   Not sure about your visa options? : Book a free 15-minute online consultation and let’s talk through your migration plans.
+    </a> 
+  </span>
+</div>
 
       {/* Main header */}
       <header

@@ -144,7 +144,7 @@ export function HeroSection() {
               {/* Secondary cards */}
               <div className="grid grid-cols-2 gap-4">
                 <motion.div
-                  className="glass p-6 rounded-xl backdrop-blur-xl bg-white/5 border border-white/10"
+                  className="glass p-6 rounded-xl backdrop-blur-xl  bg-[url('/images/mia.jpg')] bg-cover bg-center bg-black/40 border border-white/10"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -154,7 +154,7 @@ export function HeroSection() {
                 </motion.div>
 
                 <motion.div
-                  className="glass p-6 rounded-xl backdrop-blur-xl bg-white/5 border border-white/10"
+                  className="glass p-6 rounded-xl backdrop-blur-xl bg-[url('/images/mia.jpg')] bg-cover bg-center  bg-black/40 border border-white/10"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
