@@ -141,7 +141,18 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="justify-between items-center gap-4 text-center">
-            <p className="text-gray-400 text-sm">© 2026 365 Migration Hub. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">
+              © 2026 All rights reserved by{" "}
+              <a
+                href="https://sunyaverse.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white underline transition-colors"
+              >
+                Sunyaverse
+              </a>
+              .
+            </p>
           </div>
         </div>
       </div>
